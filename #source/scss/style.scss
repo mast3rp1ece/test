@@ -1,0 +1,56 @@
+
+
+@import "nullstyle.scss";
+
+
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+}
+
+
+.wrapper{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+
+
+.items {
+
+		&__container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 15px;
+		}
+
+		&__body {
+			display: grid;
+			gap: 20px;
+			grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+		}
+}
+.item {
+	padding: 50px 0;
+
+		&__video {
+			position: relative;
+			margin-bottom: 20px;
+			padding: 0 0 55% 0;
+			video, iframe{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__text {
+			font-size: 18px;
+			line-height: 150%;
+		}
+}
